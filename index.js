@@ -12,13 +12,11 @@ function distanceFromHqInBlocks(pickup){
   return blocks
 }
  
-
 function distanceFromHqInFeet(arg){
   feet = distanceFromHqInBlocks(arg) * 264
   return feet
 }
  
-
 function distanceTravelledInFeet(a, b){
   if (a > b){
     feetTravelled = (a - b) * 264
