@@ -11,7 +11,7 @@ const distanceTravelledInFeet = (a, b) => {
 }
 
 const calculatesFarePrice = (start, destination) => {
-  distance = distanceTravelledInFeet(start, destination)
+  const distance = distanceTravelledInFeet(start, destination);
   if (distance >= 2500) {
     return "cannot travel that far";
   } else if (distance >= 2000) {
