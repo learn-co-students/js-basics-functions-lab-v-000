@@ -1,37 +1,38 @@
-// Code your solution in this file!
-function distanceFromHqInBlocks(block){
-  if(block > 42){
-    return block - 42
-  } else {
-    return 42 - block
+const hQ = 42
+
+let distanceFromHqInBlocks = (block) => {
+  if(block > hQ) {
+    return block - hQ;
+  }
+  if(block < hQ) {
+    return hQ - block;
   }
 }
 
-function distanceFromHqInFeet(block) {
+let distanceFromHqInFeet = (block) => {
   return distanceFromHqInBlocks(block) * 264;
 }
 
-function distanceTravelledInFeet(starting_block, ending_block) {
-  if(starting_block < ending_block) {
-    return (ending_block - starting_block) * 264;
-  } else {
-    return (starting_block - ending_block) *264;
+let distanceTravelledInFeet = (startingBlock, endingBlock) => {
+  if(startingBlock > endingBlock){
+     return (startingBlock - endingBlock) * 264;
+  }
+  if(endingBlock > startingBlock){
+    return (endingBlock - startingBlock) * 264;
   }
 }
 
-function calculatesFarePrice(starting_block, ending_block) {
-  if(distanceTravelledInFeet(starting_block, ending_block) <= 400) {
+let calculatesFarePrice = (startingBlock, endingBlock) => {
+
+  let distance = distanceTravelledInFeet(startingBlock, endingBlock)
+
+  if(distance <= 400) {
     return 0;
-  }
-  else if (distanceTravelledInFeet(starting_block, ending_block) > 400 && distanceTravelledInFeet(starting_block, ending_block) <= 2000) {
-    return (distanceTravelledInFeet(starting_block, ending_block)) * .02;
-  }
-
-  else if (distanceTravelledInFeet(starting_block, ending_block) > 2000 && distanceTravelledInFeet(starting_block, ending_block) < 2500) {
+  } else if(distance > 400 && distance <= 2000) {
+    return distance * .02;
+  } else if(distance > 2000 && distance <= 2500) {
     return 25;
-
-  }
-  else {
+  } else {
     return `cannot travel that far`
   }
 }
