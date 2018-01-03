@@ -1,38 +1,31 @@
 function distanceFromHqInBlocks (street) {
-  const hq = 42;
-  if (street > hq) {
-    return street - hq;
+  if (street > 42) {
+    return street - 42;
   } else {
-    return hq - street;
+    return 42 - street;
   }
 }
 
 function distanceFromHqInFeet (street) {
-  const distance = distanceFromHqInBlocks(street) * 264;
-  return distance;
+  return distanceFromHqInBlocks(street) * 264;
 }
 
 function distanceTravelledInFeet (street1, street2) {
   if (street1 > street2) {
-    const distance = ((street1 - street2) * 264);
-    return distance;
+    return ((street1 - street2) * 264);
   } else {
-    const distance = ((street2 - street1) * 264);
-    return distance;
+    return ((street2 - street1) * 264);
   }
 }
 
 function calculatesFarePrice (startBlock, endBlock) {
   const distance = distanceTravelledInFeet(startBlock, endBlock);
   if (distance <= 400) {
-    const fare = 0;
-    return fare;
+    return 0;
   } else if (distance > 400 && distance < 2000) {
-    const fare = 0.02 * distance;
-    return fare;
+    return 0.02 * distance;
   } else if (distance > 2000 && distance < 2500) {
-    const fare = 25;
-    return fare;
+    return 25;
   } else if (distance > 2500) {
     return 'cannot travel that far';
   }
