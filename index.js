@@ -15,6 +15,15 @@ function distanceTravelledInFeet(beginning, destination) {
   return calculateVertical(beginning, destination)
 }
 
-function calculatesFarePrice() {
-
+function calculatesFarePrice(beginning, destination) {
+  const distance = distanceTravelledInFeet(beginning, destination);
+  if (distance < 400) {
+    return 0;
+  } else if (distance < 2000) {
+    return (distance * .02);
+  } else if (distance < 2500) {
+    return 25;
+  } else {
+    return 'cannot travel that far';
+  }
 }
