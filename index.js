@@ -1,27 +1,32 @@
 // Code your solution in this file!
-function distanceFromHqInBlocks (blockNumber) {
-  return Math.abs(42 - blockNumber)
-}
+const hq = 42;
 
-function distanceFromHqInFeet (blockNumber) {
-  return distanceFromHqInBlocks(blockNumber) * 264;
-}
+function distanceFromHqInBlocks(block) {
+  return Math.abs(block - hq);
+};
 
-function distanceTravelledInFeet (starting, ending) {
-  diff = Math.abs(starting - ending)
-  return diff*264
-}
+function distanceFromHqInFeet(block) {
+  return 264 * distanceFromHqInBlocks(block);
+};
 
-function calculatesFarePrice (start, destination) {
+function distanceTravelledInFeet(start, destination) {
+  return Math.abs(start - destination) * 264;
+
+  // diff = Math.abs(start - destination)
+  // return diff*264
+};
+
+
+function calculatesFarePrice(start, destination) {
   const distance = distanceTravelledInFeet(start, destination);
 
-  if (distance <= 400 ) {
-    return 0;
+  if (distance <= 400) {
+      return 0;
   } else if (distance > 400 && distance <= 2000) {
-    return 0.02*distance;
+      return 0.02 * distance;
   } else if (distance > 2000 && distance <= 2500) {
-    return 25;
+      return 25;
   } else {
-    return 'cannot travel that far'
-  }
-}
+      return "cannot travel that far";
+  };
+};
