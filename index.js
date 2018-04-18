@@ -26,20 +26,15 @@ function calculatesFarePrice(block1, block2) {
     const feet = distanceTravelledInFeet(block1, block2)
     let price;
     
-    switch(feet) {
-        case feet <= 400:
-            price = 0
-            break;
-        case feet > 400 && feet <= 2000:
-            price = (feet - 400) * 0.2
-            break;
-            case feet > 2000 && feet < 2500
-            price = 25
-            break;
-        case feet > 2500:
-            return "cannot travel that far"
+    if(feet < 400) {
+        return price = 0
+    } else if(feet > 400 && feet < 2000) {
+        return price = (feet - 400) * 0.02
+    } else if(feet > 2000 && feet < 2500) {
+        return price = 25
+    } else {
+        return 'cannot travel that far'
     }
     
-    return price
 }
  
