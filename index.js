@@ -22,8 +22,17 @@ function distanceTravelledInFeet(blockOne, blockTwo) {
 }
 
 function calculatesFarePrice(start, destination) {
-  feet = distanceTravelledInFeet(start, destination
-  switch (feet) {
-    case
+  let fee
+  feet = distanceTravelledInFeet(start, destination)
+
+  if (feet <= 400){
+    fee = 0
+  } else if (feet > 400 || feet < 2000) {
+    fee = feet * 2
+  } else if (feet > 2000 || feet < 2500){
+
+  } else if (feet > 2500){
+
   }
+  return fee
 }
