@@ -1,12 +1,12 @@
 // Code your solution in this file!
 
-const Hq = 42
+
 
 function distanceFromHqInBlocks(block) {
-  if (block >= Hq) {
-    return block - Hq;
+  if (block >= 42) {
+    return block - 42;
   } else {
-    return Hq - block;
+    return 42 - block;
   }
 }
 
