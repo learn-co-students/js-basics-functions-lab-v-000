@@ -4,8 +4,8 @@ function distanceFromHqInBlocks(blocks) {
   if(blocks > 42){
     return blocks - 42;
   }
-  else if(blocks < 42){
-    return 42 % blocks;
+  else {
+    return 42 - blocks;
   }
       }
 
@@ -15,8 +15,12 @@ function distanceFromHqInBlocks(blocks) {
   }
 
   function distanceTravelledInFeet(start, end){
-    const blocks = Math.abs(start-end);
-    return blocks * 264;
+    if (start < end) {
+      return (end - start) *264;
+    }
+    else {
+      return (start - end) *264;
+    }
   }
 
   function calculatesFarePrice(start, end){
