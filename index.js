@@ -10,6 +10,7 @@ if (num < hqBlock) {
 }
 
 function distanceFromHqInFeet(num) {
+  // return distanceFromHqInBlocks(blockNumber) * 264;
 
   if (num < hqBlock) {
     return ((hqBlock - num)*264)
@@ -21,9 +22,9 @@ function distanceFromHqInFeet(num) {
 function distanceTravelledInFeet(startBlock , endBlock) {
 
   if (startBlock < endBlock) {
-    return ((endBlock - startBlock)*264)
+    return (endBlock - startBlock)*264
   } else {
-    return ((startBlock - endBlock)*264)
+    return (startBlock - endBlock)*264
   }
 
 }
