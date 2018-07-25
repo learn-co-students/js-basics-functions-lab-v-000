@@ -29,7 +29,8 @@ function distanceTravelledInFeet(startBlock , endBlock) {
 }
 
 function calculatesFarePrice(start, destination) {
-
+ //this they made a constant:
+ //const distance = distanceTravelledInFeet(start, destination);
   let distance = distanceTravelledInFeet(start, destination)
 
   if (distance <= 400) {
