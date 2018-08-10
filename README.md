@@ -83,4 +83,9 @@ flat fare for a distance over 2000 feet and under 2500 feet. Finally, Scuber
 does not allow any rides over 2500 feet - the function returns `'cannot travel
 that far'` if a ride over 2500 feet is requested.
 
+## Does this need an update?
+
+Please open a [GitHub issue](https://github.com/learn-co-students/js-basics-functions-lab-v-000/issues) or [pull-reqeust](https://github.com/learn-co-students/js-basics-functions-lab-v-000/pulls). Provide a detailed description that explains the issue you have found or the change you are proposing. Then "@" mention your instructor on the issue or pull-reqeust, and send them a link via Connect.
+
+
 <p class='util--hide'>View <a href='https://learn.co/lessons/js-basics-functions-lab'>Functions Lab</a> on Learn.co and start learning to code for free.</p>
