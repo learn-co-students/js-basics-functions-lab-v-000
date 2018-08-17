@@ -26,12 +26,12 @@ function calculatesFarePrice(pickUp, destination) {
   let price
   if (theDistance < 400) {
     return price = 0;
-  } else if (theDistance  > 2500 ) {
-    return 'cannot travel that far';
-  } else if (theDistance  > 2000 ) {
-    return price = 25;
   } else if (theDistance > 400 && theDistance  < 2000 ){
     let deduction = theDistance - 400
-    return price = (deduction * 2 ) / 100;
+     return price = .02 * deduction ;   // return price = (deduction * 2 ) / 100;
+  } else if (theDistance  > 2000 && theDistance  < 2500 ) {
+    return price = 25;
+  } else {
+    return 'cannot travel that far';
   }
 }
