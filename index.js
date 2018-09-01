@@ -19,6 +19,12 @@ function distanceFromHqInFeet(distance){
   }
 }
 
-function distanceTravelledInFeet(distance){
-  
+function distanceTravelledInFeet(start_block, end_block){
+  const convert = 264
+  let distance = (end_block - start_block) * convert
+  if (end_block > start_block) {
+    return distance
+  } else if (start_block > end_block) {
+    return distance *= -1
+  }
 }
