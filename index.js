@@ -12,13 +12,12 @@ function distanceTravelledInFeet(a, b){
 }
 
 function calculatesFarePrice(a, b){
-  let flatrate = flatrate
   if (Math.abs((a - b) * 264) > 2500) {
   return 'cannot travel that far';
 }  else if (Math.abs((a - b) * 264) < 400){
   return 0
-} // else if (Math.abs((a - b) * 264) >= 400 &&  Math.abs((a - b) * 264) <=  200){
-//  return ((Math.abs((a - b) * 264) - 400) * .02)
-//}  else if (Math.abs((a - b) * 264) > 2000 &&  Math.abs((a - b) * 264) <  2500){
-//  return ((Math.abs((a - b) * 264) - 400) * .02) + flatrate
-}
+}  else if (Math.abs((a - b) * 264) >= 400 &&  Math.abs((a - b) * 264) <=  2000){
+  return ((Math.abs((a - b) * 264) - 400) * .02)
+}  else if (Math.abs((a - b) * 264) > 2000 &&  Math.abs((a - b) * 264) < 2500){
+  return 25
+} }
