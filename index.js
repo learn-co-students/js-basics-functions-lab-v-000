@@ -17,8 +17,27 @@ function distanceFromHqInFeet(somevalue) {
   return result;
 }
 
-function distanceTravelledInFeet(someValue) {
-  let result = distanceFromHqInFeet(someValue);
+function distanceTravelledInFeet(someValue1, someValue2) {
+  let result = (distanceFromHqInBlocks(someValue2) - distanceFromHqInBlocks(someValue1)) * 264;
 
-  return someValue;
+  return result;
+}
+
+function calculatesFarePrice(start, destination) {
+  let result;
+  distance = distanceTravelledInFeet(start, destination);
+
+  if (distance < 400) {
+    result = 0;
+  } else if (distance < 2000) {
+    result = (distance - 400) * 0.02;
+  } else if (distance < 2500) {
+    result = 25;
+  } else {
+    result = "cannot travel that far"
+  }
+
+
+  return result;
+
 }
