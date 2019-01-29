@@ -1,11 +1,14 @@
 // Code your solution in this file!
 
-function distanceFromHqInBlocks(starting_block, ending_block) {
-  (starting_block - ending_block)
-  console.log(result);
+function distanceFromHqInBlocks (BlockDistance) {
+  if (BlockDistance > 42) {
+    return BlockDistance - 42;
+  } else {
+  return 42 - BlockDistance;
+  }
 }
 
-function distanceFromHqInFeet(distanceFromHqInBlocks) {
+function distanceFromHqInFeet (distanceFromHqInBlocks) {
   (distanceFromHqInBlocks)* 264
   console.log(result);
 }
