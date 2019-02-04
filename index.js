@@ -16,6 +16,12 @@ function distanceFromHqInFeet(pickupLocation) {
 }
 
 
-function distanceTravelledInFeet() {
-  
+function distanceTravelledInFeet(pickupLocation, dropOffLocation) {
+  let distance;
+  if (pickupLocation > dropOffLocation) {
+    distance = (pickupLocation - dropOffLocation) * 264;
+  } else {
+    distance = (dropOffLocation - pickupLocation) * 264;
+  }
+  return distance;
 }
