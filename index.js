@@ -4,7 +4,7 @@ function distanceFromHqInBlocks(x) {
   return distance;
 }
 
-function distanceFromHqInFeet(d) {
+function distanceFromHqInFeet(distance) {
   let distance = 264*Math.abs(42 - x);
   return distance;
 }
