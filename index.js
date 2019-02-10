@@ -15,19 +15,15 @@ function distanceTravelledInFeet(x, y) {
 }
 
 function calculatesFarePrice(x, y) {
+
   let price = 0;
   let distance = distanceTravelledInFeet(x, y);
 
-  switch (distance) {
-    case >2500:
-      price = "cannot travel that far";
-      break;
-    case >2000:
-      price = 25;
-      break;
-    case >401:
-      price = (distance - 400) * 0.02;
-      break;
+  if (distance > 2500) {
+    price = "cannot travel that far";
+  } else if (distance > 2000) {
+    price = 25;
+  } else if (distance > 401) {
+    price = (distance - 400) * 0.02;
   }
-  return price;
-  }
+  return price;}
