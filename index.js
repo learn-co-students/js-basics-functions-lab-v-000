@@ -23,7 +23,7 @@ function calculatesFarePrice(x, y) {
     } else if (distance > 2000) {
       price = 25;
     } else if (distance > 401) {
-      price = (distance - 401) * 0.02;
+      price = (distance - 400) * 0.02;
     }
-  return price;  
+  return price;
   }
