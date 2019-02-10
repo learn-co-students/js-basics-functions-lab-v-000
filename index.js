@@ -17,7 +17,7 @@ function distanceTravelledInFeet(x, y) {
 function calculatesFarePrice(x, y) {
   let price = 0;
   let distance = distanceTravelledInFeet(x, y);
-  
+
     if (distance > 2500) {
       price = "cannot travel that far";
     } else if (distance > 2000) {
@@ -27,4 +27,3 @@ function calculatesFarePrice(x, y) {
     }
   return price;  
   }
-  
