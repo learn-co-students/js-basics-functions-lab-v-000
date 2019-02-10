@@ -5,6 +5,6 @@ function distanceFromHqInBlocks(x) {
 }
 
 function distanceFromHqInFeet(d) {
-  let feet = d * 264;
+  let feet = d * 12;
   return feet;
 }
