@@ -6,4 +6,5 @@ function distanceFromHqInBlocks(x) {
 
 function distanceTravelledInFeet(distance) {
   let feet = distance * 264;
+  return feet;
 }
