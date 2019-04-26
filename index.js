@@ -1,4 +1,4 @@
- s// Code your solution in this file!
+ // Code your solution in this file!
 function distanceFromHqInBlocks(blockNumber){
   let distance = blockNumber - 42;
   return Math.abs(distance);
@@ -16,12 +16,22 @@ function distanceTravelledInFeet(startBlock, endBlock){
 }
 
 function calculatesFarePrice(start, destination){
-  let distance = distanceFromHqInFeet(start, destination);
-  let price;
+  let distance = distanceTravelledInFeet(start, destination);
+  let price = 0;
+
   switch (distance){
-    case(distance < 400){
+    case  distance < 400 :
       price = 0;
+      break;
+    case distance > 400 && distance < 2000:
+      price = (distance-400)*0.02;
+      break;
+    case distance > 2500:
+      price = "cannot travel that far";
+      break;
+    case distance > 2000:
+      price = 25;
+      break;
     }
-  }
-  return price;
+    return price;
 }
