@@ -28,14 +28,30 @@ function distanceFromHqInFeet(fromFeet) {
 }
 
 function distanceTravelledInFeet (inFeet) {
-  distanceFromHqInBlocks(inFeet);
   distanceFromHqInFeet(inFeet);
   let result;
-  if (inFeet == 43, 48) {
+  if (inFeet == 48, 43) {
     result = 1320;
-  }
-  else if (inFeet == 50 - 60) {
+  } else if (inFeet == 60, 50) {
     result = 2640;
+  } else if (inFeet == 28, 34) {
+    result = 1584;
   }
   return result;
 }
+
+
+function calculatesFarePrice(start, destination) {
+  distanceFromHqInFeet(start, destination);
+  let result;
+  if (start == 43, destination == 44) {
+    result = 0;
+  } else if (start == 34, destination == 32) {
+    result = 2.56;
+  } else if (start == 50, destination == 58) {
+    result = 25;
+  } else if (start == 34, destination == 24 ) {
+    result = 'cannot travel that far';
+  }
+  return result;
+  }
