@@ -1,14 +1,14 @@
 // Code your solution in this file!
-function distanceFromHqInBlocks(street) {
-  if (street >= 42) {
-    return street - 42;
+function distanceFromHqInBlocks(distance) {
+  if (distance >= 42) {
+    return distance - 42;
   } else {
-    return 42 - street;
+    return 42 - distance;
   }
 }
 
-function distanceFromHqInFeet(street) {
-  return distanceFromHqInBlocks(street) * 264;
+function distanceFromHqInFeet(distance) {
+  return distanceFromHqInBlocks(distance) * 264;
 }
 
 function distanceTravelledInFeet(start, end) {
