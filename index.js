@@ -17,20 +17,33 @@ function distanceFromHqInFeet (someValue) {
 }
 
 
-function distanceTravelledInFeet(blockEnded,blockStarted){
+function distanceTravelledInFeet(blockStarted,blockEnded){
   let blocks;
   let distance;
-  if blockStarted < blockEnded {
+
+  if (blockEnded < blockStarted) {
     blocks = blockStarted - blockEnded
     distance = blocks * 264;
+  } else {
+    blocks = blockEnded - blockStarted
+    distance = blocks * 264;
   }
-    else {
-      blocks = blockStarted - blockEnded
-      distance = blocks * 264;
-    }
-return distance
+  return distance
 }
 
-function calculatesFarePrice(someValue){
 
+function calculatesFarePrice(start, destination) {
+  let feet = distanceTravelledInFeet(start, destination);
+  let price;
+
+  if (feet >= 1 && feet <= 400) {
+    return price = 0;
+  } else if (feet >= 400 && feet <= 2000) {
+     price = (feet - 400) * 0.02;
+     return price;
+  } else if (feet >= 2000 && feet <= 2500) {
+    return price = 25;
+  } else if (feet > 2500) {
+    return 'cannot travel that far';
+  }
 }
