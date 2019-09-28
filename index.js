@@ -52,7 +52,26 @@ function calculatesFarePrice(start, destination){
 }
 
 
-// The first four hundred feet are free
+// function calculatesFarePrice(start, destination){
+//     const flatRate = 25.00;
+//     const flatRateDistance = 2000;
+//     const freeDistance = 400;
+//     const distance = distanceTravelledInFeet(start, destination)
+//     switch (distance) {
+//         case distance <= freeDistance:
+//             return 0;
+//             break;
+//         case distance > freeDistance && distance <= flatRateDistance:
+//             return Math.abs(distance - freeDistance)  ;
+//             break;
+//         case distance >= 
+      
+//   }
+// }
+
+
+
+// [x] The first four hundred feet are free
 // distance between 400 and 2000 feet, the price is 2 cents per foot(not including 400, which are free!). 
 // 2000 feet and under 2500 feet (flat fare)
 // over 2500 feet 'cannot travel that far'
