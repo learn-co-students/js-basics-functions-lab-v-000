@@ -13,6 +13,8 @@ describe('index.js', function() {
     });
   });
 
+
+
   describe('distanceFromHqInFeet()', function() {
     it('returns a distance in feet', function() {
       expect(distanceFromHqInFeet(43)).to.equal(264);
@@ -26,6 +28,8 @@ describe('index.js', function() {
       expect(distanceFromHqInFeet(34)).to.equal(2112);
     });
   });
+
+
 
   describe('distanceTravelledInFeet()', function() {
     it('returns the distance travelled in feet', function() {
